@@ -44,4 +44,4 @@ int main(void)
  * 	}
  * 	printf("%ld\n", p);
  * 	return (0);
- * }
+ * }}
