@@ -12,26 +12,15 @@
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-    listint_t *new;  // declare a pointer to a new node
+	listint_t *new;
 
-    // check if head pointer is NULL, meaning an empty list
-    if (head == NULL)
-        return (NULL);
-
-    // allocate memory for new node, and check if allocation was successful
-    new = malloc(sizeof(listint_t));
-    if (new == NULL)
-        return (NULL);
-
-    // set the "n" value of the new node to the passed integer parameter
-    new->n = n;
-
-    // set the "next" pointer of the new node to point to the current head of the list
-    new->next = *head;
-
-    // set the head pointer to point to the new node, making it the new head of the list
-    *head = new;
-
-    // return a pointer to the new node
-    return (new);
+	if (head == NULL)
+		return (NULL);
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	new->next = *head;
+	*head = new;
+	return (new);
 }
